@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+    "plugin:react/jsx-runtime",
+    "prettier",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-russian"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": true, "tsconfigRootDir": "./" },
+  "plugins": ["@typescript-eslint"],
+  "root": true,
+  "ignorePatterns": ["dist"],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": [
+      2,
+      { "fixStyle": "separate-type-imports" }
+    ],
+    "@typescript-eslint/no-restricted-imports": [
+      2,
+      {
+        "paths": [
+          {
+            "name": "react-redux",
+            "importNames": ["useSelector", "useStore", "useDispatch"],
+            "message": "Please use pre-typed versions from `app/src/hooks.ts` instead."
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [{ "files": ["*.{c,m,}{t,j}s", "*.{t,j}sx"] }]
+}
