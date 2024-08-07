@@ -1,10 +1,10 @@
 import "./App.css";
-import SocialMediaButton from "./src/components/SocialMediaButton.jsx";
+import Card from "./src/components/Card.jsx";
 
 const App = () => {
   return (
     <div className="App">
-      <SocialMediaButton />
+      <Card />
     </div>
   );
 };
