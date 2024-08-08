@@ -1,9 +1,10 @@
 import "./App.css";
+import Card from "./src/components/Card.jsx";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">Here will be your amazing app</header>
+      <Card />
     </div>
   );
 };
