@@ -2,7 +2,7 @@
   width: 376px;
   height: 450px;
   flex-direction: column;
-  gap: 57px;
+  gap: 40px;
   margin: 62px 50px;
   border-radius: 10px;
   border: 1px solid var(--second-color);

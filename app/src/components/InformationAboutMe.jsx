@@ -10,6 +10,7 @@ const InformationAboutMe = () => {
       <div class="article-section">
         <h2 class="name">Valentina Savitskaia</h2>
         <h2>Serbia, Belgrade</h2>
+        <h2 class="name profession">Front-end developer.</h2>
       </div>
     </div>
   );

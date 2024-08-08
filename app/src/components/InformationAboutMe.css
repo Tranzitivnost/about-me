@@ -7,6 +7,7 @@
   height: 100%;
   width: 100%;
 }
+
 .header {
   display: flex;
   flex-direction: column;
@@ -18,20 +19,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
 }
 
 h2 {
-  color: var(--light-text);
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 300;
+  color: var(--yellow);
+  font-size: 14px;
+  font-weight: 500;
   letter-spacing: 0.2px;
   text-align: center;
   align-items: center;
   margin: 0;
+  font-family: "Open Sans";
 }
 
 .name {
-  font-size: 30px;
+  font-size: 27px;
+  color: var(--light-text);
+  font-weight: 500;
+  font-family: "Open Sans";
+}
+
+.profession {
+  font-size: 14px;
+  margin-top: 18px;
+  font-weight: 200;
+  font-family: "Open Sans";
 }
