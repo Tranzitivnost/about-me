@@ -2,10 +2,10 @@ import "./SocialMediaButtons.css";
 
 const SocialMediaButtons = () => {
   return (
-    <div class="buttons-box">
-      <button class="button">GitHub</button>
-      <button class="button">Linkedln</button>
-      <button class="button">Instagram</button>
+    <div className="buttons-box">
+      <button className="button">GitHub</button>
+      <button className="button">Linkedln</button>
+      <button className="button">Instagram</button>
     </div>
   );
 };

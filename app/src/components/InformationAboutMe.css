@@ -1,11 +1,5 @@
-.photo_container {
-  width: 130px;
-  height: 130px;
-}
-
 .photoAvatar {
-  height: 100%;
-  width: 100%;
+  height: 130px;
 }
 
 .header {

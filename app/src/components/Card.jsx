@@ -3,7 +3,7 @@ import SocialMediaButtons from "./SocialMediaButtons.jsx";
 import InformationAboutMe from "./InformationAboutMe.jsx";
 const Card = () => {
   return (
-    <div class="card">
+    <div className="card">
       <InformationAboutMe />
       <SocialMediaButtons />
     </div>
