@@ -3,6 +3,14 @@
   height: 130px;
 }
 
-.photoAvatar {
-  width: 130;
+.img-s {
+  width: 120px;
+}
+
+.img-m {
+  width: 130px;
+}
+
+.img-l {
+  width: 140px;
 }
