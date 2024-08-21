@@ -12,21 +12,21 @@ h2 {
   text-align: center;
   align-items: center;
   margin: 0;
-  font-family: "Open Sans";
+  font-family: "Open Sans", serif;
 }
 
 .name {
   font-size: 27px;
   color: var(--light-text);
   font-weight: 500;
-  font-family: "Open Sans";
+  font-family: "Open Sans", serif;
 }
 
 .profession {
   font-size: 14px;
   margin-top: 18px;
   font-weight: 200;
-  font-family: "Open Sans";
+  font-family: "Open Sans", serif;
 }
 
 .text-s {
