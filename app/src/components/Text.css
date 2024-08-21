@@ -28,3 +28,27 @@ h2 {
   font-weight: 200;
   font-family: "Open Sans";
 }
+
+.text-s {
+  font-size: 12px;
+}
+
+.text-m {
+  font-size: 14px;
+}
+
+.text-l {
+  font-size: 16px;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-yellow {
+  color: var(--yellow);
+}

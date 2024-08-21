@@ -7,7 +7,7 @@ const InformationAboutMe = () => {
   return (
     <div className="header">
       <Avatar src={myImage} size="m" />
-      <Text />
+      <Text color="yellow" size="m" />
     </div>
   );
 };
