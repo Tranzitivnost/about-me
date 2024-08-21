@@ -6,7 +6,7 @@
   display: inline-flex;
   height: 50px;
   width: 280px;
-  padding: 20px 36px;
+
   align-items: center;
   flex-shrink: 0;
   border: 1px solid var(--first-color);
@@ -17,13 +17,5 @@
   text-align: center;
   justify-content: center;
   font-family: "Open Sans";
-}
-
-.buttons-box {
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  text-decoration: none;
 }

@@ -1,11 +1,11 @@
 import "./Card.css";
-import SocialMediaButtons from "./SocialMediaButtons.jsx";
+import Container from "./Container.jsx";
 import InformationAboutMe from "./InformationAboutMe.jsx";
 const Card = () => {
   return (
     <div className="card">
       <InformationAboutMe />
-      <SocialMediaButtons />
+      <Container />
     </div>
   );
 };
