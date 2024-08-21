@@ -1,5 +1,4 @@
 import "./Avatar.css";
-// import myImage from "./images/1_avatar.png";
 
 const Avatar = ({ src, size = "m" }) => {
   return (

@@ -4,6 +4,14 @@
   src: url("./src/components/fonts/OpenSans-Medium.ttf") format("ttf");
 }
 
+:root {
+  --light-text: #fff;
+  --yellow: #cbf157;
+  --background-color: #141414;
+  --first-color: #333333;
+  --second-color: #1f1f1f;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
