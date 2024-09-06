@@ -1,0 +1,28 @@
+button {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  display: inline-flex;
+  height: 50px;
+  width: 280px;
+
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid var(--first-color);
+  background-color: var(--first-color);
+  box-shadow: var(--background-color);
+  color: var(--light-text);
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Open Sans", serif;
+  text-decoration: none;
+  border: 0px;
+  padding: 0px;
+}
+
+button:hover {
+  background-color: var(--click-color);
+  border: 1px solid var(--click-color);
+}

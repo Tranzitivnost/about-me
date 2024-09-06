@@ -1,8 +1,3 @@
-.photo_container {
-  width: 130px;
-  height: 130px;
-}
-
 .img-s {
   width: 120px;
 }
@@ -13,4 +8,8 @@
 
 .img-l {
   width: 140px;
+}
+
+.photoAvatar {
+  margin-bottom: 25px;
 }

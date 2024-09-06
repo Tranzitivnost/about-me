@@ -1,9 +1,9 @@
 import "./Link.css";
 
-const Link = ({ href, text }) => {
+const Link = ({ href, children, target }) => {
   return (
-    <a href={href} className="button" target="_blank">
-      {text}
+    <a href={href} className="decoration" target={target}>
+      {children}
     </a>
   );
 };
