@@ -1,4 +1,5 @@
 import "./Card.css";
+import Container from "./Container.jsx";
 import Avatar from "./Avatar";
 import Header from "./Header";
 import Text from "./Text";
@@ -7,26 +8,23 @@ import Link from "./Link.jsx";
 import Button from "./Button.jsx";
 const Card = () => {
   return (
-    <div className="card">
-      <Avatar src={myImage} size="m" />
-      <Header text={"Valentina Savitskaia"} />
-      <Header color="yellow" size="m" text={"Belgrade, Serbia"} />
-      <Text text={"Front-end developer."} />
-      <div className="buttons-box">
-        <Link
-          href="https://github.com/Tranzitivnost"
-          children={<Button text="GitHub" />}
-        />
-        <Link
-          href="https://rs.linkedin.com/"
-          children={<Button text="LinkedIn" />}
-        />
-        <Link
-          href="https://www.instagram.com/"
-          children={<Button text="Instagram" />}
-        />
-      </div>
-    </div>
+    <Container className={"card"}>
+      <Avatar src={myImage} size="m" className={"marginBottom"} />
+      <Header children={"Valentina Savitskaia"} />
+      <Header color="yellow" size="m" children={"Belgrade, Serbia"} />
+      <Text children={"Front-end developer."} />
+      <Container className={"buttons-box"}>
+        <Link href="https://github.com/Tranzitivnost" className={"decoration"}>
+          <Button className={"buttonWidth"} text="GitHub" />
+        </Link>
+        <Link href="https://rs.linkedin.com/" className={"decoration"}>
+          <Button className={"buttonWidth"} text="LinkedIn" />
+        </Link>
+        <Link href="https://www.instagram.com/" className={"decoration"}>
+          <Button className={"buttonWidth"} text="Instagram" />
+        </Link>
+      </Container>
+    </Container>
   );
 };
 

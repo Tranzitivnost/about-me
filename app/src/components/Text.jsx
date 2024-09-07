@@ -1,7 +1,7 @@
 import "./Text.css";
 
-const Text = ({ text }) => {
-  return <p className="profession">{text}</p>;
+const Text = ({ children }) => {
+  return <p className="text">{children}</p>;
 };
 
 export default Text;

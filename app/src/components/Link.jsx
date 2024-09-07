@@ -1,8 +1,8 @@
 import "./Link.css";
 
-const Link = ({ href, children, target }) => {
+const Link = ({ href, children, target, className }) => {
   return (
-    <a href={href} className="decoration" target={target}>
+    <a href={href} className={`width ${className}`} target={target}>
       {children}
     </a>
   );
