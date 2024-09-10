@@ -1,7 +1,7 @@
 import "./Text.css";
 
 const Text = ({ children }) => {
-  return <p className="text">{children}</p>;
+  return <div className="text">{children}</div>;
 };
 
 export default Text;

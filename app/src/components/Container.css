@@ -1,3 +1,7 @@
+.container {
+  display: flex;
+}
+
 .justifyStart {
   justify-items: flex-start;
 }

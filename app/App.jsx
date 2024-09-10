@@ -1,11 +1,12 @@
 import "./App.css";
 import Card from "./src/components/Card.jsx";
+import Container from "./src/components/Container.jsx";
 
 const App = () => {
   return (
-    <div className="App">
+    <Container className="App">
       <Card />
-    </div>
+    </Container>
   );
 };
 

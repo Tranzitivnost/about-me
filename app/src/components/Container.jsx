@@ -1,16 +1,5 @@
 import "./Container.css";
-
-const getClassNames = classNamesMapping => {
-  const result = [];
-
-  for (const [className, value] of Object.entries(classNamesMapping)) {
-    if (value) {
-      result.push(className);
-    }
-  }
-
-  return result.join(" ").trim();
-};
+import { getClassNames } from "../helpers/getClassNames";
 
 const Container = ({
   className,
@@ -32,7 +21,9 @@ const Container = ({
   };
 
   return (
-    <div className={`${className} ${getClassNames(classNamesMapping)}`}>
+    <div
+      className={`container ${className} ${getClassNames(classNamesMapping)}`}
+    >
       {children}
     </div>
   );

@@ -23,11 +23,11 @@ h2 {
 }
 
 .color-red {
-  color: red;
+  color: var(--red);
 }
 
 .color-blue {
-  color: blue;
+  color: var(--blue);
 }
 
 .color-yellow {

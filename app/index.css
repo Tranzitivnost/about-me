@@ -6,6 +6,8 @@
   --second-color: #1f1f1f;
   --click-color: #292323;
   --click-color-2: #2e2e2e;
+  --red: red;
+  --blue: blue;
 }
 
 body {

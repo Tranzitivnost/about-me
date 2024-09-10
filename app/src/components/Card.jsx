@@ -14,17 +14,29 @@ const Card = () => {
       <Header color="yellow" size="m">
         Belgrade, Serbia
       </Header>
-      <Text>Front-end developer.</Text>
+      <Text className="text">Front-end developer.</Text>
       <Container className={"buttons-box"} alignCenter justifyCenter>
-        <Link href="https://github.com/Tranzitivnost" className={"link"}>
+        <Link
+          target={"_blank"}
+          href="https://github.com/Tranzitivnost"
+          className={"link"}
+        >
           <Button className={"button"} type="submit">
             GitHub
           </Button>
         </Link>
-        <Link href="https://rs.linkedin.com/" className={"link"}>
+        <Link
+          target={"_blank"}
+          href="https://rs.linkedin.com/"
+          className={"link"}
+        >
           <Button className={"button"}>LinkedIn</Button>
         </Link>
-        <Link href="https://www.instagram.com/" className={"link"}>
+        <Link
+          target={"_blank"}
+          href="https://www.instagram.com/"
+          className={"link"}
+        >
           <Button className={"button"}>Instagram</Button>
         </Link>
       </Container>
