@@ -1,32 +1,27 @@
 .card {
   width: 276px;
   flex-direction: column;
-  margin: 62px 50px;
   border-radius: 10px;
   border: 1px solid var(--second-color);
   background: var(--second-color);
   display: flex;
   padding: 50px 43px;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 .buttons-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   gap: 10px;
   width: 100%;
 }
 
-.marginBottom {
+.avatar {
   margin-bottom: 25px;
 }
-.buttonWidth {
+.button {
   width: 100%;
 }
 
-.decoration {
+.link {
   text-decoration: none;
 }

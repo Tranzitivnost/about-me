@@ -8,20 +8,24 @@ import Link from "./Link.jsx";
 import Button from "./Button.jsx";
 const Card = () => {
   return (
-    <Container className={"card"}>
-      <Avatar src={myImage} size="m" className={"marginBottom"} />
-      <Header children={"Valentina Savitskaia"} />
-      <Header color="yellow" size="m" children={"Belgrade, Serbia"} />
-      <Text children={"Front-end developer."} />
-      <Container className={"buttons-box"}>
-        <Link href="https://github.com/Tranzitivnost" className={"decoration"}>
-          <Button className={"buttonWidth"} text="GitHub" />
+    <Container alignCenter className={"card"}>
+      <Avatar src={myImage} size="m" className={"avatar"} />
+      <Header>Valentina Savitskaia</Header>
+      <Header color="yellow" size="m">
+        Belgrade, Serbia
+      </Header>
+      <Text>Front-end developer.</Text>
+      <Container className={"buttons-box"} alignCenter justifyCenter>
+        <Link href="https://github.com/Tranzitivnost" className={"link"}>
+          <Button className={"button"} type="submit">
+            GitHub
+          </Button>
         </Link>
-        <Link href="https://rs.linkedin.com/" className={"decoration"}>
-          <Button className={"buttonWidth"} text="LinkedIn" />
+        <Link href="https://rs.linkedin.com/" className={"link"}>
+          <Button className={"button"}>LinkedIn</Button>
         </Link>
-        <Link href="https://www.instagram.com/" className={"decoration"}>
-          <Button className={"buttonWidth"} text="Instagram" />
+        <Link href="https://www.instagram.com/" className={"link"}>
+          <Button className={"button"}>Instagram</Button>
         </Link>
       </Container>
     </Container>
