@@ -1,0 +1,33 @@
+.card {
+  width: 276px;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid var(--second-color);
+  background: var(--second-color);
+  display: flex;
+  padding: 50px 43px;
+}
+
+.buttons-box {
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.avatar {
+  margin-bottom: 25px;
+}
+
+.button {
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.text {
+  color: var(--light-text);
+  margin-top: 18px;
+  margin-bottom: 25px;
+}
