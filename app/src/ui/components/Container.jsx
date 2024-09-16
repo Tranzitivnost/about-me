@@ -1,6 +1,6 @@
 import styles from "./Container.module.css";
 import clsx from "clsx";
-import { getClassNames } from "../helpers/getClassNames";
+import { getClassNames } from "../../helpers/getClassNames";
 
 const Container = ({
   className,

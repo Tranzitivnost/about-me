@@ -1,0 +1,24 @@
+@mixin applyTheme(
+  $bg-primary,
+  $bg-secondary,
+  $color-primary,
+  $color-secondary
+) {
+  .scheme-primary {
+    background-color: $bg-primary;
+    color: $color-primary;
+  }
+
+  .scheme-secondary {
+    background-color: $bg-secondary;
+    color: $color-secondary;
+  }
+
+  .typography-primary {
+    color: $color-primary;
+  }
+
+  .typography-secondary {
+    color: $color-secondary;
+  }
+}

@@ -1,10 +1,17 @@
 import { useLayoutEffect } from "react";
 import styles from "./App.module.css";
-import Card from "./src/components/Card.jsx";
-import Container from "./src/components/Container.jsx";
+import Card from "./src/ui/components/Card.jsx";
+import Container from "./src/ui/components/Container.jsx";
+import { useTheme } from "./src/ui/hooks/useTheme.js";
 import clsx from "clsx";
 
 const App = () => {
+  const { restoreTheme, setTheme } = useTheme();
+
+  useLayoutEffect(() => {
+    restoreTheme();
+  }, []);
+
   return (
     <Container className={clsx([styles.app])}>
       <Card />

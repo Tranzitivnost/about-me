@@ -1,0 +1,42 @@
+@import "src/ui/styles/scheme.scss";
+@import "src/ui/styles/mixins-theme.scss";
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-color);
+  overflow-x: hidden;
+  justify-content: center;
+  font-family: "Open Sans", serif;
+
+  &.current-theme-light {
+    // TODO 2: Apply the light theme colors
+  }
+
+  &.current-theme-dark {
+    @include applyTheme(
+      $dark-theme-background-primary,
+      $dark-theme-background-secondary,
+      $dark-theme-color-primary,
+      $dark-theme-color-secondary
+    );
+  }
+}
+
+:root {
+  --light-text: #fff;
+  --yellow: #cbf157;
+  --background-color: #141414;
+  --first-color: #333333;
+  --second-color: #1f1f1f;
+  --click-color: #292323;
+  --click-color-2: #2e2e2e;
+  --red: red;
+  --blue: blue;
+}
