@@ -1,4 +1,5 @@
-import "./Card.css";
+import styles from "./Card.module.css";
+import clsx from "clsx";
 import Container from "./Container.jsx";
 import Avatar from "./Avatar";
 import Header from "./Header";
@@ -8,36 +9,36 @@ import Link from "./Link.jsx";
 import Button from "./Button.jsx";
 const Card = () => {
   return (
-    <Container alignCenter className={"card"}>
-      <Avatar src={myImage} size="m" className={"avatar"} />
+    <Container alignCenter className={styles.card}>
+      <Avatar src={myImage} size="m" className={styles.avatar} />
       <Header>Valentina Savitskaia</Header>
       <Header color="yellow" size="m">
         Belgrade, Serbia
       </Header>
-      <Text className="text">Front-end developer.</Text>
-      <Container className={"buttons-box"} alignCenter justifyCenter>
+      <Text className={styles["text"]}>Front-end developer.</Text>
+      <Container className={styles["buttons-box"]} alignCenter justifyCenter>
         <Link
           target={"_blank"}
           href="https://github.com/Tranzitivnost"
-          className={"link"}
+          className={styles.link}
         >
-          <Button className={"button"} type="submit">
+          <Button className={styles.button} type="submit">
             GitHub
           </Button>
         </Link>
         <Link
           target={"_blank"}
           href="https://rs.linkedin.com/"
-          className={"link"}
+          className={styles.link}
         >
-          <Button className={"button"}>LinkedIn</Button>
+          <Button className={styles.button}>LinkedIn</Button>
         </Link>
         <Link
           target={"_blank"}
           href="https://www.instagram.com/"
-          className={"link"}
+          className={styles.link}
         >
-          <Button className={"button"}>Instagram</Button>
+          <Button className={styles.button}>Instagram</Button>
         </Link>
       </Container>
     </Container>

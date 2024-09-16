@@ -1,7 +1,9 @@
-import "./Header.css";
+import styles from "./Header.module.css";
+import clsx from "clsx";
 
 const Header = ({ size = "xl", color = "white", children }) => {
-  return <h2 className={`color-${color} text-${size}`}>{children}</h2>;
+  const headerStyles = clsx(styles[`color-${color}`], styles[`text-${size}`]);
+  return <h2 className={headerStyles}>{children}</h2>;
 };
 
 export default Header;
