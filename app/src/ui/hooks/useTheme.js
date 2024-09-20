@@ -12,40 +12,46 @@ const REG_EXP = new RegExp(`${THEME_PREFIX}\\w+`);
 export function useTheme() {
   const themeCache = new LocalStorage(THEME_NAMESPACE_KEY);
 
-  function constructThemeName(theme) {
+  function getClassNameFromTheme(theme) {
     return `${THEME_PREFIX}-${theme}`;
+  }
+
+  function getThemeFromClassName(className) {
+    return className.split("-").at(-1);
   }
 
   function getTheme() {
     const currentTheme = document.body.className.match(REG_EXP)?.[0];
     const themeFromCache = themeCache.getItem(THEME_KEY);
 
-    return currentTheme || themeFromCache;
+    return getThemeFromClassName(
+      currentTheme || themeFromCache || DEFAULT_THEME,
+    );
   }
 
   function setTheme(theme) {
-    if (!THEMES.includes(theme.split("-").at(-1))) {
+    if (!THEMES.includes(theme)) {
       throw new Error(`Theme ${theme} is not supported`);
     }
 
-    const newTheme = constructThemeName(theme);
-
-    if (document.body.className.includes(newTheme)) {
-      document.body.className = document.body.className.replace(
-        REG_EXP,
-        newTheme,
-      );
-    } else {
-      document.body.className = document.body.className
-        .concat(` ${newTheme}`)
-        .trim();
+    if (theme === getTheme()) {
+      return;
     }
 
-    themeCache.setItem(THEME_KEY, newTheme);
+    const themeClassName = getClassNameFromTheme(theme);
+    const themeClassNames = THEMES.map(getClassNameFromTheme);
+
+    for (const className of themeClassNames) {
+      document.body.classList.remove(className);
+    }
+
+    document.body.classList.add(themeClassName);
+
+    themeCache.setItem(THEME_KEY, theme);
   }
 
   function getThemeFromCache() {
-    return themeCache.getItem(THEME_KEY).split("-").at(-1);
+    return themeCache.getItem(THEME_KEY);
   }
 
   function restoreTheme() {
