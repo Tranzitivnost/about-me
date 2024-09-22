@@ -1,17 +1,24 @@
 @mixin applyTheme(
   $bg-primary,
   $bg-secondary,
+  $bg-third,
   $color-primary,
   $color-secondary
 ) {
-  .scheme-primary {
+  .color-scheme-primary {
     background-color: $bg-primary;
     color: $color-primary;
   }
 
-  .scheme-secondary {
+  .color-scheme-secondary {
     background-color: $bg-secondary;
     color: $color-secondary;
+    border: $color-secondary;
+  }
+
+  .color-scheme-third {
+    background-color: $bg-third;
+    color: $color-primary;
   }
 
   .typography-primary {

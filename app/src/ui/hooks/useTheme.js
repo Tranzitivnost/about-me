@@ -1,4 +1,3 @@
-import { useLayoutEffect } from "react";
 import { LocalStorage } from "../../helpers/LocalStorage";
 
 export const DEFAULT_THEME = "dark";
@@ -34,10 +33,6 @@ export function useTheme() {
       throw new Error(`Theme ${theme} is not supported`);
     }
 
-    if (theme === getTheme()) {
-      return;
-    }
-
     const themeClassName = getClassNameFromTheme(theme);
     const themeClassNames = THEMES.map(getClassNameFromTheme);
 
@@ -55,14 +50,14 @@ export function useTheme() {
   }
 
   function restoreTheme() {
-    const currentTheme = getTheme();
+    const themeFromCache = getThemeFromCache();
 
-    if (!currentTheme) {
+    if (!themeFromCache) {
       setTheme(DEFAULT_THEME);
       return;
     }
 
-    setTheme(getThemeFromCache());
+    setTheme(themeFromCache);
   }
 
   return { getTheme, setTheme, restoreTheme };

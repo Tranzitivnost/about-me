@@ -31,9 +31,9 @@ h2 {
 }
 
 .color-yellow {
-  color: var(--yellow);
+  composes: typography-secondary from global;
 }
 
 .color-white {
-  color: var(--light-text);
+  composes: typography-primary from global;
 }

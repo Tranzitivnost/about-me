@@ -14,12 +14,12 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <Container className={clsx([styles.appContainer])}>
       <ThemeToggle />
       <Container className={clsx([styles.app])}>
         <Card />
       </Container>
-    </>
+    </Container>
   );
 };
 
