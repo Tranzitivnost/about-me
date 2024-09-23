@@ -19,6 +19,17 @@
   .color-scheme-third {
     background-color: $bg-third;
     color: $color-primary;
+    &:hover {
+      box-shadow: inset 0px 2px 10px 0px $bg-secondary;
+      border: 1px solid $bg-secondary;
+    }
+  }
+
+  .color-scheme-third-hover {
+    &:hover {
+      box-shadow: inset 0px 2px 10px 0px $bg-secondary;
+      border: 1px solid $bg-secondary;
+    }
   }
 
   .typography-primary {
