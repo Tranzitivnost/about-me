@@ -1,12 +1,17 @@
 import styles from "./ThemeToggle.module.css";
 import clsx from "clsx";
 import React, { useState } from "react";
+import { useTheme } from "../hooks/useTheme";
 
 const ThemeToggle = () => {
-  const [isWhiteMode, setIsWhiteMode] = useState(false);
+  const { setTheme, getTheme } = useTheme();
+  const [isWhiteMode, setIsWhiteMode] = useState(
+    getTheme() === "light" ? true : false,
+  );
 
   const handleCheckboxChange = () => {
     setIsWhiteMode(!isWhiteMode);
+    setTheme(isWhiteMode ? "dark" : "light");
   };
 
   return (
@@ -22,7 +27,7 @@ const ThemeToggle = () => {
         htmlFor="checkbox"
         className={clsx(
           styles["checkbox-label"],
-          isWhiteMode ? styles.white : "",
+          isWhiteMode ? styles.light : "",
         )}
       >
         <span className={styles.ball}></span>
