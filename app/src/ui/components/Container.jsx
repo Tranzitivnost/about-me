@@ -11,6 +11,8 @@ const Container = ({
   alignStart,
   alignCenter,
   alignEnd,
+  flexDirectionColumn,
+  justifyContentCenter,
 }) => {
   const classNamesMapping = {
     justifyStart,
@@ -19,6 +21,8 @@ const Container = ({
     alignStart,
     alignCenter,
     alignEnd,
+    flexDirectionColumn,
+    justifyContentCenter,
   };
 
   return (
@@ -33,6 +37,8 @@ const Container = ({
           [styles.alignStart]: alignStart,
           [styles.alignCenter]: alignCenter,
           [styles.alignEnd]: alignEnd,
+          [styles.flexDirectionColumn]: flexDirectionColumn,
+          [styles.justifyContentCenter]: justifyContentCenter,
         },
       ])}
     >

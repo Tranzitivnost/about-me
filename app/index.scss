@@ -5,13 +5,13 @@ body {
   margin: 0;
 
   &.current-theme-light {
-    // TODO 2: Apply the light theme colors
     @include applyTheme(
       $light-theme-background-primary,
       $light-theme-background-secondary,
       $light-theme-background-third,
       $light-theme-color-primary,
-      $light-theme-color-secondary
+      $light-theme-color-secondary,
+      $light-theme-toggle-color
     );
   }
 
@@ -21,7 +21,8 @@ body {
       $dark-theme-background-secondary,
       $dark-theme-background-third,
       $dark-theme-color-primary,
-      $dark-theme-color-secondary
+      $dark-theme-color-secondary,
+      $dark-theme-toggle-color
     );
   }
 }

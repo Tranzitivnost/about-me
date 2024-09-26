@@ -14,11 +14,14 @@ const App = () => {
   }, []);
 
   return (
-    <Container className={clsx([styles.appContainer])}>
+    <Container
+      className={clsx([styles.app])}
+      alignCenter
+      justifyContentCenter
+      flexDirectionColumn
+    >
       <ThemeToggle />
-      <Container className={clsx([styles.app])}>
-        <Card />
-      </Container>
+      <Card />
     </Container>
   );
 };

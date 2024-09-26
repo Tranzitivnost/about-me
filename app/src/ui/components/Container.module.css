@@ -14,6 +14,10 @@
   justify-items: center;
 }
 
+.justifyContentCenter {
+  justify-content: center;
+}
+
 .alignStart {
   align-items: start;
 }
@@ -24,4 +28,8 @@
 
 .alignCenter {
   align-items: center;
+}
+
+.flexDirectionColumn {
+  flex-direction: column;
 }

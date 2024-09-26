@@ -9,7 +9,7 @@ import Link from "./Link.jsx";
 import Button from "./Button.jsx";
 const Card = () => {
   return (
-    <Container alignCenter className={styles.card}>
+    <Container alignCenter flexDirectionColumn className={styles.card}>
       <Avatar src={myImage} size="m" className={styles.avatar} />
       <Header>Valentina Savitskaia</Header>
       <Header color="yellow" size="m">

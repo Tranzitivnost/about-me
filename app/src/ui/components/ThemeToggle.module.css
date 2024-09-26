@@ -9,7 +9,6 @@
 }
 
 .checkbox-label {
-  background-color: var(--second-color);
   width: 40px;
   height: 16px;
   border-radius: 50px;
@@ -38,5 +37,5 @@
 }
 
 .light {
-  background-color: rgb(127, 98, 177);
+  composes: color-toggle-scheme from global;
 }
