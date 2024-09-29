@@ -36,6 +36,6 @@
   transform: translateX(24px);
 }
 
-.light {
+.switch {
   composes: color-toggle-scheme from global;
 }
