@@ -5,12 +5,10 @@
   border-radius: 10px;
   border: 1px solid;
 
-  display: flex;
   padding: 50px 43px;
 }
 
 .buttons-box {
-  flex-direction: column;
   gap: 10px;
   width: 100%;
 }

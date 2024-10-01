@@ -22,12 +22,8 @@ h2 {
   font-size: 27px;
 }
 
-.color-red {
-  color: var(--red);
-}
-
 .color-blue {
-  color: var(--blue);
+  color: var(--blue-text);
 }
 
 .color-yellow {

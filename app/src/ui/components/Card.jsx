@@ -12,11 +12,16 @@ const Card = () => {
     <Container alignCenter flexDirectionColumn className={styles.card}>
       <Avatar src={myImage} size="m" className={styles.avatar} />
       <Header>Valentina Savitskaia</Header>
-      <Header color="yellow" size="m">
+      <Header color="blue" size="m">
         Belgrade, Serbia
       </Header>
       <Text className={styles["text"]}>Front-end developer.</Text>
-      <Container className={styles["buttons-box"]} alignCenter justifyCenter>
+      <Container
+        className={styles["buttons-box"]}
+        alignCenter
+        justifyCenter
+        flexDirectionColumn
+      >
         <Link
           target={"_blank"}
           href="https://github.com/Tranzitivnost"
