@@ -12,7 +12,7 @@ const Card = () => {
     <Container alignCenter flexDirectionColumn className={styles.card}>
       <Avatar src={myImage} size="m" className={styles.avatar} />
       <Header>Valentina Savitskaia</Header>
-      <Header color="blue" size="m">
+      <Header color="yellow" size="m">
         Belgrade, Serbia
       </Header>
       <Text className={styles["text"]}>Front-end developer.</Text>

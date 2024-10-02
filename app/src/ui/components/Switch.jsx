@@ -1,13 +1,21 @@
 import styles from "./Switch.module.css";
 import clsx from "clsx";
+import { useState } from "react";
 
-const Switch = ({ onChange, isActiveMode }) => {
+const Switch = ({ onChange, defaultValue }) => {
+  const [isChecked, setIsChecked] = useState(defaultValue);
+  const handleCheckboxChange = event => {
+    setIsChecked(event.target.checked);
+  };
   return (
     <div className={styles.position}>
       <input
         type="checkbox"
-        checked={isActiveMode}
-        onChange={onChange}
+        checked={isChecked}
+        onChange={event => {
+          onChange();
+          handleCheckboxChange(event);
+        }}
         className={styles.checkbox}
         id="checkbox"
       />

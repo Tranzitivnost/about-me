@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import styles from "./App.module.css";
 import Card from "./src/ui/components/Card.jsx";
 import Container from "./src/ui/components/Container.jsx";
@@ -8,15 +8,11 @@ import clsx from "clsx";
 
 const App = () => {
   const { restoreTheme, setTheme, getTheme } = useTheme();
-  const [isActiveMode, setIsActiveMode] = useState(
-    getTheme() === "light" ? true : false,
-  );
 
   const handleCheckboxChange = () => {
-    setIsActiveMode(!isActiveMode);
-    setTheme(isActiveMode ? "dark" : "light");
+    setTheme(getTheme() === "light" ? "dark" : "light");
   };
-
+  const booleanValue = getTheme() === "light" ? true : false;
   useLayoutEffect(() => {
     restoreTheme();
   }, []);
@@ -28,7 +24,7 @@ const App = () => {
       justifyContentCenter
       flexDirectionColumn
     >
-      <Switch onChange={handleCheckboxChange} isActiveMode={isActiveMode} />
+      <Switch onChange={handleCheckboxChange} defaultValue={booleanValue} />
       <Card />
     </Container>
   );
