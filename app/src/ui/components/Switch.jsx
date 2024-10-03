@@ -6,16 +6,15 @@ const Switch = ({ onChange, defaultValue }) => {
   const [isChecked, setIsChecked] = useState(defaultValue);
   const handleCheckboxChange = event => {
     setIsChecked(event.target.checked);
+    onChange();
   };
+
   return (
     <div className={styles.position}>
       <input
         type="checkbox"
         checked={isChecked}
-        onChange={event => {
-          onChange();
-          handleCheckboxChange(event);
-        }}
+        onChange={handleCheckboxChange}
         className={styles.checkbox}
         id="checkbox"
       />

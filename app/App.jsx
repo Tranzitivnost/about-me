@@ -12,7 +12,7 @@ const App = () => {
   const handleCheckboxChange = () => {
     setTheme(getTheme() === "light" ? "dark" : "light");
   };
-  const booleanValue = getTheme() === "light" ? true : false;
+  const isCurrentThemeLight = getTheme() === "light" ? true : false;
   useLayoutEffect(() => {
     restoreTheme();
   }, []);
@@ -24,7 +24,10 @@ const App = () => {
       justifyContentCenter
       flexDirectionColumn
     >
-      <Switch onChange={handleCheckboxChange} defaultValue={booleanValue} />
+      <Switch
+        onChange={handleCheckboxChange}
+        defaultValue={isCurrentThemeLight}
+      />
       <Card />
     </Container>
   );
