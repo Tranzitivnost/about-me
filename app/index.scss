@@ -3,40 +3,26 @@
 
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--background-color);
-  overflow-x: hidden;
-  justify-content: center;
-  font-family: "Open Sans", serif;
 
   &.current-theme-light {
-    // TODO 2: Apply the light theme colors
+    @include applyTheme(
+      $light-theme-background-primary,
+      $light-theme-background-secondary,
+      $light-theme-background-third,
+      $light-theme-color-primary,
+      $light-theme-color-secondary,
+      $light-theme-toggle-color
+    );
   }
 
   &.current-theme-dark {
     @include applyTheme(
       $dark-theme-background-primary,
       $dark-theme-background-secondary,
+      $dark-theme-background-third,
       $dark-theme-color-primary,
-      $dark-theme-color-secondary
+      $dark-theme-color-secondary,
+      $dark-theme-toggle-color
     );
   }
-}
-
-:root {
-  --light-text: #fff;
-  --yellow: #cbf157;
-  --background-color: #141414;
-  --first-color: #333333;
-  --second-color: #1f1f1f;
-  --click-color: #292323;
-  --click-color-2: #2e2e2e;
-  --red: red;
-  --blue: blue;
 }

@@ -1,17 +1,31 @@
 @mixin applyTheme(
   $bg-primary,
   $bg-secondary,
+  $bg-third,
   $color-primary,
-  $color-secondary
+  $color-secondary,
+  $color-toggle
 ) {
-  .scheme-primary {
+  .color-scheme-primary {
     background-color: $bg-primary;
     color: $color-primary;
   }
 
-  .scheme-secondary {
+  .color-scheme-secondary {
     background-color: $bg-secondary;
-    color: $color-secondary;
+    color: $bg-secondary;
+  }
+
+  .color-scheme-third {
+    background-color: $bg-third;
+    color: $color-primary;
+  }
+
+  .color-scheme-third-hover {
+    &:hover {
+      box-shadow: inset 0px 2px 10px 0px $bg-secondary;
+      border: 1px solid $bg-secondary;
+    }
   }
 
   .typography-primary {
@@ -20,5 +34,9 @@
 
   .typography-secondary {
     color: $color-secondary;
+  }
+
+  .color-toggle-scheme {
+    background-color: $color-toggle;
   }
 }

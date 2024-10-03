@@ -1,15 +1,14 @@
 .card {
+  composes: color-scheme-secondary from global;
   width: 276px;
-  flex-direction: column;
+
   border-radius: 10px;
-  border: 1px solid var(--second-color);
-  background: var(--second-color);
-  display: flex;
+  border: 1px solid;
+
   padding: 50px 43px;
 }
 
 .buttons-box {
-  flex-direction: column;
   gap: 10px;
   width: 100%;
 }
@@ -27,7 +26,8 @@
 }
 
 .text {
-  color: var(--light-text);
+  composes: typography-primary from global;
+
   margin-top: 18px;
   margin-bottom: 25px;
 }

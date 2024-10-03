@@ -1,3 +1,10 @@
 .app {
-  text-align: center;
+  composes: color-scheme-primary from global;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  overflow-x: hidden;
+
+  font-family: "Open Sans", serif;
 }
