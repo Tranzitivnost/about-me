@@ -30,7 +30,7 @@ export function useTheme() {
 
   function setTheme(theme) {
     if (!THEMES.includes(theme)) {
-      throw new Error(`Theme ${theme} is not supported`);
+      return;
     }
 
     const themeClassName = getClassNameFromTheme(theme);
@@ -52,7 +52,7 @@ export function useTheme() {
   function restoreTheme() {
     const themeFromCache = getThemeFromCache();
 
-    if (!themeFromCache) {
+    if (!themeFromCache || !THEMES.includes(themeFromCache)) {
       setTheme(DEFAULT_THEME);
       return;
     }

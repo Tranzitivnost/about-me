@@ -1,7 +1,12 @@
 import styles from "./Text.module.css";
 import clsx from "clsx";
 
-const Text = ({ children, className }) => {
+type Props = {
+  children: any;
+  className: string;
+};
+
+const Text = ({ children, className }: Props) => {
   return <div className={clsx([styles.text, className])}>{children}</div>;
 };
 
