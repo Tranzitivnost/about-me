@@ -1,7 +1,14 @@
 import styles from "./Link.module.css";
 import clsx from "clsx";
 
-const Link = ({ href, children, target, className }) => {
+type Props = {
+  children: any;
+  href: string;
+  target: string;
+  className: string;
+};
+
+const Link = ({ href, children, target, className }: Props) => {
   return (
     <a
       href={href}

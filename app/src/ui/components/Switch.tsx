@@ -2,9 +2,14 @@ import styles from "./Switch.module.css";
 import clsx from "clsx";
 import { useState } from "react";
 
-const Switch = ({ onChange, defaultValue }) => {
+type Props = {
+  defaultValue: any;
+  onChange: any;
+};
+
+const Switch = ({ onChange, defaultValue }: Props) => {
   const [isChecked, setIsChecked] = useState(defaultValue);
-  const handleCheckboxChange = event => {
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
     onChange();
   };

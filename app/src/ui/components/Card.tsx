@@ -1,12 +1,11 @@
 import styles from "./Card.module.css";
-import clsx from "clsx";
-import Container from "./Container.jsx";
+import Container from "./Container";
 import Avatar from "./Avatar";
 import Header from "./Header";
 import Text from "./Text";
 import myImage from "./images/1_avatar.png";
-import Link from "./Link.jsx";
-import Button from "./Button.jsx";
+import Link from "./Link";
+import Button from "./Button";
 const Card = () => {
   return (
     <Container alignCenter flexDirectionColumn className={styles.card}>
