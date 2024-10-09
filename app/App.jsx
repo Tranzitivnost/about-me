@@ -13,6 +13,7 @@ const App = () => {
     setTheme(getTheme() === "light" ? "dark" : "light");
   };
   const isCurrentThemeLight = getTheme() === "light" ? true : false;
+
   useLayoutEffect(() => {
     restoreTheme();
   }, []);
