@@ -1,21 +1,23 @@
 export class LocalStorage {
-  constructor(nameSpace) {
+  nameSpace: string;
+
+  constructor(nameSpace: string) {
     this.nameSpace = nameSpace;
   }
 
-  getKey(key) {
+  getKey(key: string) {
     return `${this.nameSpace}:${key}`;
   }
 
-  getItem(key) {
+  getItem(key: string) {
     return localStorage.getItem(this.getKey(key));
   }
 
-  setItem(key, value) {
+  setItem(key: string, value: string) {
     localStorage.setItem(this.getKey(key), value);
   }
 
-  removeItem(key) {
+  removeItem(key: string) {
     localStorage.removeItem(this.getKey(key));
   }
 
@@ -23,7 +25,7 @@ export class LocalStorage {
     localStorage.clear();
   }
 
-  key(index) {
+  key(index: number) {
     return localStorage.key(index);
   }
 

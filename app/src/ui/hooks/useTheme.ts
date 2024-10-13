@@ -11,11 +11,11 @@ const REG_EXP = new RegExp(`${THEME_PREFIX}\\w+`);
 export function useTheme() {
   const themeCache = new LocalStorage(THEME_NAMESPACE_KEY);
 
-  function getClassNameFromTheme(theme) {
+  function getClassNameFromTheme(theme: string) {
     return `${THEME_PREFIX}-${theme}`;
   }
 
-  function getThemeFromClassName(className) {
+  function getThemeFromClassName(className: string) {
     return className.split("-").at(-1);
   }
 
@@ -28,7 +28,7 @@ export function useTheme() {
     );
   }
 
-  function setTheme(theme) {
+  function setTheme(theme: string) {
     if (!THEMES.includes(theme)) {
       return;
     }

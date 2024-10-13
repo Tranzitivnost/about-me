@@ -2,7 +2,7 @@ import { useLayoutEffect } from "react";
 import styles from "./App.module.css";
 import Card from "./src/ui/components/Card";
 import Container from "./src/ui/components/Container";
-import { useTheme } from "./src/ui/hooks/useTheme.js";
+import { useTheme } from "./src/ui/hooks/useTheme";
 import Switch from "./src/ui/components/Switch";
 import clsx from "clsx";
 
