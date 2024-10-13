@@ -1,7 +1,11 @@
 import styles from "./Container.module.css";
 import clsx from "clsx";
 
-type Props = {
+interface Props
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   children: any;
   justifyStart?: boolean;
   justifyCenter?: boolean;
@@ -11,9 +15,10 @@ type Props = {
   alignEnd?: boolean;
   flexDirectionColumn?: boolean;
   justifyContentCenter?: boolean;
+  rest?: string;
 
   className?: string;
-};
+}
 
 const Container = ({
   className,
@@ -26,9 +31,11 @@ const Container = ({
   alignEnd,
   flexDirectionColumn,
   justifyContentCenter,
+  ...rest
 }: Props) => {
   return (
     <div
+      {...rest}
       className={clsx([
         styles.container,
         className,

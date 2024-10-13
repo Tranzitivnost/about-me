@@ -32,14 +32,14 @@ const Card = () => {
         </Link>
         <Link
           target={"_blank"}
-          href="https://rs.linkedin.com/"
+          href="https://www.linkedin.com/in/tranzitivnost"
           className={styles.link}
         >
           <Button className={styles.button}>LinkedIn</Button>
         </Link>
         <Link
           target={"_blank"}
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/tranzitivnost/"
           className={styles.link}
         >
           <Button className={styles.button}>Instagram</Button>
