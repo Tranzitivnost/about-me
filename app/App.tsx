@@ -5,12 +5,12 @@ import Container from "./src/ui/components/Container";
 import { useTheme } from "./src/ui/hooks/useTheme";
 import Switch from "./src/ui/components/Switch";
 import clsx from "clsx";
-
+import { Theme } from "./src/ui/hooks/useTheme";
 const App = () => {
   const { restoreTheme, setTheme, getTheme } = useTheme();
 
   const handleCheckboxChange = () => {
-    setTheme(getTheme() === "light" ? "dark" : "light");
+    setTheme(getTheme() === Theme.Dark ? Theme.Light : Theme.Dark);
   };
   const isCurrentThemeLight = getTheme() === "light" ? true : false;
 

@@ -8,7 +8,6 @@ interface Props
   > {
   children: any;
   className: string;
-  rest?: string;
 }
 
 const Text = ({ children, className, ...rest }: Props) => {

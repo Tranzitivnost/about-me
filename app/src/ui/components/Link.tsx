@@ -10,7 +10,6 @@ interface Props
   href: string;
   target: string;
   className: string;
-  rest?: string;
 }
 
 const Link = ({ href, children, target, className, ...rest }: Props) => {

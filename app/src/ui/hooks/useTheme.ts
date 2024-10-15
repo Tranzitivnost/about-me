@@ -1,7 +1,10 @@
 import { LocalStorage } from "../../helpers/LocalStorage";
-
-export const DEFAULT_THEME = "dark";
-export const THEMES = ["light", "dark"];
+export enum Theme {
+  Dark = "dark",
+  Light = "light",
+}
+export const DEFAULT_THEME = Theme.Dark;
+export const THEMES: Theme[] = [Theme.Dark, Theme.Light];
 export const THEME_PREFIX = "current-theme";
 
 const THEME_NAMESPACE_KEY = "app-theme";
@@ -11,7 +14,7 @@ const REG_EXP = new RegExp(`${THEME_PREFIX}\\w+`);
 export function useTheme() {
   const themeCache = new LocalStorage(THEME_NAMESPACE_KEY);
 
-  function getClassNameFromTheme(theme: string) {
+  function getClassNameFromTheme(theme: Theme) {
     return `${THEME_PREFIX}-${theme}`;
   }
 
@@ -28,7 +31,7 @@ export function useTheme() {
     );
   }
 
-  function setTheme(theme: string) {
+  function setTheme(theme: Theme) {
     if (!THEMES.includes(theme)) {
       return;
     }
@@ -45,8 +48,8 @@ export function useTheme() {
     themeCache.setItem(THEME_KEY, theme);
   }
 
-  function getThemeFromCache() {
-    return themeCache.getItem(THEME_KEY);
+  function getThemeFromCache(): Theme | null {
+    return themeCache.getItem(THEME_KEY) as Theme | null;
   }
 
   function restoreTheme() {

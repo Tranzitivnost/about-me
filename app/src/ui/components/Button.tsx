@@ -7,7 +7,6 @@ interface Props
     HTMLButtonElement
   > {
   children: string;
-  rest?: string;
 }
 
 const Button = ({ children, className, ...rest }: Props) => {

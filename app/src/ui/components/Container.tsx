@@ -15,7 +15,6 @@ interface Props
   alignEnd?: boolean;
   flexDirectionColumn?: boolean;
   justifyContentCenter?: boolean;
-  rest?: string;
 
   className?: string;
 }

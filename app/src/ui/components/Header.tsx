@@ -6,13 +6,12 @@ type TSize = "s" | "m" | "l" | "xl";
 type TColor = "blue" | "white" | "yellow";
 interface Props
   extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDivElement>,
-    HTMLDivElement
+    React.HTMLAttributes<HTMLHeadingElement>,
+    HTMLHeadingElement
   > {
   children: string;
   size?: TSize;
   color?: TColor;
-  rest?: string;
 }
 
 const Header = ({ size = "xl", color = "white", children, ...rest }: Props) => {

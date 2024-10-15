@@ -12,7 +12,6 @@ interface Props
   size?: TSize;
   alt?: string;
   className?: string;
-  rest?: string;
 }
 
 const Avatar: React.FunctionComponent<Props> = ({
