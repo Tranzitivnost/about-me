@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Link.module.css";
 import clsx from "clsx";
 
@@ -6,7 +7,7 @@ interface Props
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  children: JSX.Element;
+  children: React.ReactNode;
   href: string;
   target: string;
   className: string;

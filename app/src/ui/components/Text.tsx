@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Text.module.css";
 import clsx from "clsx";
 
@@ -6,7 +7,7 @@ interface Props
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  children: JSX.Element;
+  children: React.ReactNode;
   className: string;
 }
 
