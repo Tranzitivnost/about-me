@@ -1,18 +1,20 @@
 import { useLayoutEffect } from "react";
 import styles from "./App.module.css";
-import Card from "./src/ui/components/Card.jsx";
-import Container from "./src/ui/components/Container.jsx";
-import { useTheme } from "./src/ui/hooks/useTheme.js";
-import Switch from "./src/ui/components/Switch.jsx";
+import Card from "./src/ui/components/Card";
+import Container from "./src/ui/components/Container";
+import { useTheme } from "./src/ui/hooks/useTheme";
+import Switch from "./src/ui/components/Switch";
 import clsx from "clsx";
-
+import { Theme } from "./src/ui/hooks/useTheme";
+import React from "react";
 const App = () => {
   const { restoreTheme, setTheme, getTheme } = useTheme();
 
   const handleCheckboxChange = () => {
-    setTheme(getTheme() === "light" ? "dark" : "light");
+    setTheme(getTheme() === Theme.Dark ? Theme.Light : Theme.Dark);
   };
   const isCurrentThemeLight = getTheme() === "light" ? true : false;
+
   useLayoutEffect(() => {
     restoreTheme();
   }, []);

@@ -1,6 +1,24 @@
+import React from "react";
 import styles from "./Container.module.css";
 import clsx from "clsx";
-import { getClassNames } from "../../helpers/getClassNames";
+
+interface Props
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
+  children: React.ReactNode;
+  justifyStart?: boolean;
+  justifyCenter?: boolean;
+  justifyEnd?: boolean;
+  alignStart?: boolean;
+  alignCenter?: boolean;
+  alignEnd?: boolean;
+  flexDirectionColumn?: boolean;
+  justifyContentCenter?: boolean;
+
+  className?: string;
+}
 
 const Container = ({
   className,
@@ -13,20 +31,11 @@ const Container = ({
   alignEnd,
   flexDirectionColumn,
   justifyContentCenter,
-}) => {
-  const classNamesMapping = {
-    justifyStart,
-    justifyCenter,
-    justifyEnd,
-    alignStart,
-    alignCenter,
-    alignEnd,
-    flexDirectionColumn,
-    justifyContentCenter,
-  };
-
+  ...rest
+}: Props) => {
   return (
     <div
+      {...rest}
       className={clsx([
         styles.container,
         className,
