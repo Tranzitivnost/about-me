@@ -6,7 +6,7 @@ interface Props
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  children: any;
+  children: JSX.Element;
   href: string;
   target: string;
   className: string;

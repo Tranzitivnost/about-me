@@ -6,7 +6,7 @@ interface Props
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  children: any;
+  children: JSX.Element;
   className: string;
 }
 
