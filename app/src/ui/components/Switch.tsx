@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Switch.module.css";
 import clsx from "clsx";
 import { useState } from "react";

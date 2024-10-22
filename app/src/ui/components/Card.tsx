@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Card.module.css";
 import Container from "./Container";
 import Avatar from "./Avatar";
