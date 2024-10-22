@@ -6,6 +6,7 @@ import { useTheme } from "./src/ui/hooks/useTheme";
 import Switch from "./src/ui/components/Switch";
 import clsx from "clsx";
 import { Theme } from "./src/ui/hooks/useTheme";
+import React from "react";
 const App = () => {
   const { restoreTheme, setTheme, getTheme } = useTheme();
 
