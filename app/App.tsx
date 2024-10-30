@@ -31,7 +31,7 @@ const App = () => {
         onChange={handleCheckboxChange}
         defaultValue={isCurrentThemeLight}
       />
-      <Card className={styles.media} />
+      <Card className={styles.mycard} />
     </Container>
   );
 };

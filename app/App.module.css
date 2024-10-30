@@ -4,20 +4,20 @@
   height: 100vh;
   overflow: hidden;
   font-family: "Open Sans", serif;
-}
 
-.switch {
-  position: absolute;
-  top: 0;
-  right: 10%;
-}
-
-.media {
-  @media (max-width: 430px) {
-    width: 65% !important;
+  & .switch {
+    position: absolute;
+    top: 0;
+    right: 10%;
   }
 
-  @media (max-width: 768px) {
-    transform: scale(0.85) !important;
+  & .mycard {
+    @media (max-width: 430px) {
+      width: 65%;
+    }
+
+    @media (max-width: 768px) {
+      transform: scale(0.85);
+    }
   }
 }
