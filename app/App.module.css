@@ -2,9 +2,22 @@
   composes: color-scheme-primary from global;
   width: 100%;
   height: 100vh;
-  display: flex;
-
-  overflow-x: hidden;
-
+  overflow: hidden;
   font-family: "Open Sans", serif;
+
+  & .switch {
+    position: absolute;
+    top: 0;
+    right: 10%;
+  }
+
+  & .mycard {
+    @media (max-width: 430px) {
+      width: 65%;
+    }
+
+    @media (max-width: 768px) {
+      transform: scale(0.85);
+    }
+  }
 }

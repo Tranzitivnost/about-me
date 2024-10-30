@@ -6,9 +6,10 @@ import { useState } from "react";
 interface Props {
   defaultValue: boolean;
   onChange: (value: boolean) => void;
+  className?: string;
 }
 
-const Switch = ({ onChange, defaultValue }: Props) => {
+const Switch = ({ onChange, defaultValue, className }: Props) => {
   const [isChecked, setIsChecked] = useState(defaultValue);
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
@@ -16,7 +17,7 @@ const Switch = ({ onChange, defaultValue }: Props) => {
   };
 
   return (
-    <div className={styles.position}>
+    <div className={className}>
       <input
         type="checkbox"
         checked={isChecked}
