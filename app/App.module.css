@@ -2,9 +2,15 @@
   composes: color-scheme-primary from global;
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: block;
 
-  overflow-x: hidden;
+  overflow: hidden;
 
   font-family: "Open Sans", serif;
+}
+
+.position {
+  position: absolute;
+  top: 0;
+  right: 10%;
 }

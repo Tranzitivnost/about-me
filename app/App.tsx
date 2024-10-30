@@ -27,6 +27,7 @@ const App = () => {
       flexDirectionColumn
     >
       <Switch
+        className={styles.position}
         onChange={handleCheckboxChange}
         defaultValue={isCurrentThemeLight}
       />
