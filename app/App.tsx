@@ -27,11 +27,11 @@ const App = () => {
       flexDirectionColumn
     >
       <Switch
-        className={styles.position}
+        className={styles.switch}
         onChange={handleCheckboxChange}
         defaultValue={isCurrentThemeLight}
       />
-      <Card />
+      <Card className={styles.media} />
     </Container>
   );
 };

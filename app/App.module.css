@@ -2,15 +2,22 @@
   composes: color-scheme-primary from global;
   width: 100%;
   height: 100vh;
-  display: block;
-
   overflow: hidden;
-
   font-family: "Open Sans", serif;
 }
 
-.position {
+.switch {
   position: absolute;
   top: 0;
   right: 10%;
+}
+
+.media {
+  @media (max-width: 430px) {
+    width: 65% !important;
+  }
+
+  @media (max-width: 768px) {
+    transform: scale(0.85) !important;
+  }
 }
