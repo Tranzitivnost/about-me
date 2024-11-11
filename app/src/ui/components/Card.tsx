@@ -8,7 +8,28 @@ import myImage from "./images/1_avatar.png";
 import Link from "./Link";
 import Button from "./Button";
 import clsx from "clsx";
-const Card = ({ className }) => {
+
+interface CardProps {
+  className?: string;
+  name: string;
+  location: string;
+  jobRole: string;
+  surname: string;
+  links: {
+    href: string;
+    label: string;
+    order: string;
+  }[];
+}
+
+const Card = ({
+  className,
+  name,
+  location,
+  jobRole,
+  surname,
+  links,
+}: CardProps) => {
   return (
     <Container
       alignCenter
@@ -16,40 +37,33 @@ const Card = ({ className }) => {
       className={clsx(styles.card, className)}
     >
       <Avatar src={myImage} size="m" className={styles.avatar} />
-      <Header>Valentina Savitskaia</Header>
-      <Header color="yellow" size="m">
-        Belgrade, Serbia
+      <Header>
+        {name} {surname}
       </Header>
-      <Text className={styles["text"]}>Front-end developer.</Text>
+      <Header color="yellow" size="m">
+        {location}
+      </Header>
+      <Text className={styles["text"]}>{jobRole}.</Text>
       <Container
         className={styles["buttons-box"]}
         alignCenter
         justifyCenter
         flexDirectionColumn
       >
-        <Link
-          target={"_blank"}
-          href="https://github.com/Tranzitivnost"
-          className={styles.link}
-        >
-          <Button className={styles.button} type="submit">
-            GitHub
-          </Button>
-        </Link>
-        <Link
-          target={"_blank"}
-          href="https://www.linkedin.com/in/tranzitivnost"
-          className={styles.link}
-        >
-          <Button className={styles.button}>LinkedIn</Button>
-        </Link>
-        <Link
-          target={"_blank"}
-          href="https://www.instagram.com/tranzitivnost/"
-          className={styles.link}
-        >
-          <Button className={styles.button}>Instagram</Button>
-        </Link>
+        {links
+          .sort((a, b) => Number(a.order) - Number(b.order))
+          .map(item => (
+            <Link
+              key={item.href}
+              target={"_blank"}
+              href={item.href}
+              className={styles.link}
+            >
+              <Button className={styles.button} type="submit">
+                {item.label}
+              </Button>
+            </Link>
+          ))}
       </Container>
     </Container>
   );

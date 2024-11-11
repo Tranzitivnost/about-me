@@ -10,7 +10,7 @@ interface Props
     React.HTMLAttributes<HTMLHeadingElement>,
     HTMLHeadingElement
   > {
-  children: string;
+  children: React.ReactNode;
   size?: TSize;
   color?: TColor;
 }
