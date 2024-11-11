@@ -9,7 +9,11 @@ import { setPerson } from "../slices/personSlice";
 import { useEffect } from "react";
 import Card from "../ui/components/Card";
 
-const CardContainer = () => {
+interface Props {
+  className: string;
+}
+
+const CardContainer = ({ className }: Props) => {
   const dispatch = useDispatch();
   const links = useSelector((state: RootState) => state.links);
   const person = useSelector((state: RootState) => state.person);
@@ -45,6 +49,7 @@ const CardContainer = () => {
 
   return (
     <Card
+      className={className}
       name={person.person.name}
       jobRole={person.person.jobRole}
       location={person.person.location}

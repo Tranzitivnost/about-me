@@ -3,8 +3,8 @@ import App from "../../App";
 import { useLayoutEffect } from "react";
 import { useTheme } from "../ui/hooks/useTheme";
 import { Theme } from "../ui/hooks/useTheme";
-import Card from '../ui/components/Card';
-import CardContainer from './CardContainer';
+import styles from "./AppContainer.module.css";
+import CardContainer from "./CardContainer";
 
 const AppContainer = () => {
   const { restoreTheme, setTheme, getTheme } = useTheme();
@@ -19,7 +19,7 @@ const AppContainer = () => {
 
   return (
     <App onChange={handleCheckboxChange} defaultValue={isCurrentThemeLight}>
-      <CardContainer/>
+      <CardContainer className={styles.mycard} />
     </App>
   );
 };
