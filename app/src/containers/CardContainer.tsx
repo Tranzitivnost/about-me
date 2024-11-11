@@ -18,27 +18,27 @@ const CardContainer = ({ className }: Props) => {
   const links = useSelector((state: RootState) => state.links);
   const person = useSelector((state: RootState) => state.person);
 
+  const fetchLinks = async () => {
+    try {
+      const data = await apiRequest<LinkModel>("links");
+      const links: LinkModel[] = data.map(el => el.fields);
+      dispatch(setLinks(links));
+    } catch (error) {
+      console.error("Ошибка при запросе данных:", error);
+    }
+  };
+
+  const fetchPerson = async () => {
+    try {
+      const data = await apiRequest<PersonModel>("persons");
+      const persons: PersonModel[] = data.map(el => el.fields);
+      dispatch(setPerson(persons[0]));
+    } catch (error) {
+      console.error("Ошибка при запросе данных:", error);
+    }
+  };
+
   useEffect(() => {
-    const fetchLinks = async () => {
-      try {
-        const data = await apiRequest<LinkModel>("links");
-        const links: LinkModel[] = data.map(el => el.fields);
-        dispatch(setLinks(links));
-      } catch (error) {
-        console.error("Ошибка при запросе данных:", error);
-      }
-    };
-
-    const fetchPerson = async () => {
-      try {
-        const data = await apiRequest<PersonModel>("persons");
-        const persons: PersonModel[] = data.map(el => el.fields);
-        dispatch(setPerson(persons[0]));
-      } catch (error) {
-        console.error("Ошибка при запросе данных:", error);
-      }
-    };
-
     fetchPerson();
     fetchLinks();
   }, []);

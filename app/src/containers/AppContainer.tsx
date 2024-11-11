@@ -1,6 +1,6 @@
 import React from "react";
 import App from "../../App";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useTheme } from "../ui/hooks/useTheme";
 import { Theme } from "../ui/hooks/useTheme";
 import styles from "./AppContainer.module.css";
@@ -13,7 +13,7 @@ const AppContainer = () => {
   };
   const isCurrentThemeLight = getTheme() === "light" ? true : false;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     restoreTheme();
   }, []);
 
