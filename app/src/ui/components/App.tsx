@@ -1,7 +1,7 @@
 import styles from "./App.module.css";
-import Container from "./src/ui/components/Container";
+import Container from "./Container";
 
-import Switch from "./src/ui/components/Switch";
+import Switch from "./Switch";
 import clsx from "clsx";
 
 import React from "react";

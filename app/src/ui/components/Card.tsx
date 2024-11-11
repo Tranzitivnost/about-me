@@ -59,9 +59,7 @@ const Card = ({
               href={item.href}
               className={styles.link}
             >
-              <Button className={styles.button} type="submit">
-                {item.label}
-              </Button>
+              <Button className={styles.button}>{item.label}</Button>
             </Link>
           ))}
       </Container>

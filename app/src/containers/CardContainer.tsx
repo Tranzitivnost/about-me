@@ -24,7 +24,7 @@ const CardContainer = ({ className }: Props) => {
       const links: LinkModel[] = data.map(el => el.fields);
       dispatch(setLinks(links));
     } catch (error) {
-      console.error("Ошибка при запросе данных:", error);
+      console.error("Error loading links:", error);
     }
   };
 
@@ -34,7 +34,7 @@ const CardContainer = ({ className }: Props) => {
       const persons: PersonModel[] = data.map(el => el.fields);
       dispatch(setPerson(persons[0]));
     } catch (error) {
-      console.error("Ошибка при запросе данных:", error);
+      console.error("Error loading person:", error);
     }
   };
 
@@ -43,7 +43,7 @@ const CardContainer = ({ className }: Props) => {
     fetchLinks();
   }, []);
 
-  if (!person.person) {
+  if (!person.person || !links.links.length) {
     return null;
   }
 
