@@ -4,7 +4,6 @@ import Container from "./Container";
 import Avatar from "./Avatar";
 import Header from "./Header";
 import Text from "./Text";
-import myImage from "./images/1_avatar.png";
 import Link from "./Link";
 import Button from "./Button";
 import clsx from "clsx";
@@ -20,6 +19,7 @@ interface CardProps {
     label: string;
     order: string;
   }[];
+  img: string;
 }
 
 const Card = ({
@@ -29,6 +29,7 @@ const Card = ({
   jobRole,
   surname,
   links,
+  img,
 }: CardProps) => {
   return (
     <Container
@@ -36,7 +37,7 @@ const Card = ({
       flexDirectionColumn
       className={clsx(styles.card, className)}
     >
-      <Avatar src={myImage} size="m" className={styles.avatar} />
+      <Avatar src={img} size="m" className={styles.avatar} />
       <Header>
         {name} {surname}
       </Header>

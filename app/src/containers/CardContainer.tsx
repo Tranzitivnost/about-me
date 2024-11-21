@@ -8,7 +8,7 @@ import { RootState } from "../store";
 import { setPerson } from "../slices/personSlice";
 import { useEffect } from "react";
 import Card from "../ui/components/Card";
-
+import myImage from "../../assets/1_avatar.png";
 interface Props {
   className: string;
 }
@@ -55,6 +55,7 @@ const CardContainer = ({ className }: Props) => {
       location={person.person.location}
       surname={person.person.surname}
       links={[...links.links]}
+      img={myImage}
     />
   );
 };
