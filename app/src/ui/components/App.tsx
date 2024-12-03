@@ -2,24 +2,28 @@ import styles from "./App.module.css";
 import Container from "./Container";
 
 import Switch from "./Switch";
-import clsx from "clsx";
 
 import React from "react";
 
 const App = ({ onChange, defaultValue, children }) => {
   return (
     <Container
-      className={clsx([styles.app])}
+      className={styles.app}
       alignCenter
-      justifyContentCenter
+      justifyCenter
       flexDirectionColumn
     >
-      <Switch
-        className={styles.switch}
-        onChange={onChange}
-        defaultValue={defaultValue}
-      />
-      {children}
+      <Container className={styles.switchContainer} justifyEnd>
+        <Switch onChange={onChange} defaultValue={defaultValue} />
+      </Container>
+      <Container
+        className={styles.main}
+        justifyCenter
+        alignCenter
+        flexDirectionColumn
+      >
+        {children}
+      </Container>
     </Container>
   );
 };

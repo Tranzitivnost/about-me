@@ -15,7 +15,6 @@ interface Props
   alignCenter?: boolean;
   alignEnd?: boolean;
   flexDirectionColumn?: boolean;
-  justifyContentCenter?: boolean;
 
   className?: string;
 }
@@ -30,7 +29,6 @@ const Container = ({
   alignCenter,
   alignEnd,
   flexDirectionColumn,
-  justifyContentCenter,
   ...rest
 }: Props) => {
   return (
@@ -47,7 +45,6 @@ const Container = ({
           [styles.alignCenter]: alignCenter,
           [styles.alignEnd]: alignEnd,
           [styles.flexDirectionColumn]: flexDirectionColumn,
-          [styles.justifyContentCenter]: justifyContentCenter,
         },
       ])}
     >
